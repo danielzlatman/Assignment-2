@@ -104,9 +104,10 @@
         min-height: 200px !important; /* מבטל את min-height: 100vh מהפריסה הרגילה */
     }
     .sidebar-col .layout-block {
-         height: 200px !important;
-         margin-top: 10px !important; /* הוספת רווח עליון לפס הצד להתחיל את הפריסה במובייל */
-         margin-bottom: 0 !important;
+          height: 200px !important;
+          /* תיקון: הסרת מרווח עליון מיותר (הבלוק יופיע בסוף לאחר תיקון ה-order ב-HTML) */
+          margin-top: 0 !important; 
+          margin-bottom: 0 !important;
     }
     
     /* הוספת רווח תחתון קבוע להפרדה אחידה בין כל השורות */
@@ -122,4 +123,6 @@
     
     /* ניקוי מרווחי ה-row של Bootstrap */
     .row {
-        --bs
+        --bs-gutter-x: 0 !important;
+    }
+}
