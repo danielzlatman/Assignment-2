@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 100%;
+    height: 100vh;
+    border: 3px solid red;
+    overflow: hidden;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 18%;
+    height: 100%;
+    float: left;
+    border: 3px solid red;
+}
+
+/* CONTENT */
+.content {
+    width: 82%;
+    height: 100%;
+    float: left;
+}
+
+/* ROWS – each one third */
+
+.row {
+    width: 100%;
+    height: 33.333%;
+    overflow: hidden;
+}
+
+.top,
+.middle,
+.bottom {
+    padding: 10px;
+}
+
+/* TOP */
+.top .box {
+    width: 24%;
+    height: 100%;
+    float: left;
+    margin-right: 1.333%;
+    border: 3px solid red;
+}
+
+.top .box:last-child {
+    margin-right: 0;
+}
+
+/* MIDDLE */
+.middle-left {
+    width: 45%;
+    height: 100%;
+    float: left;
+}
+
+.middle-left .small {
+    width: 100%;
+    height: 48%;
+    border: 3px solid red;
+    margin-bottom: 2%;
+}
+
+.big {
+    width: 53%;
+    height: 100%;
+    float: right;
+    border: 3px solid red;
+}
+
+/* BOTTOM   */
+.bottom .wide {
+    width: 65%;
+    height: 100%;
+    float: left;
+    border: 3px solid red;
+}
+
+.bottom .medium {
+    width: 33%;
+    height: 100%;
+    float: right;
+    border: 3px solid red;
+}
+
+
+
+
+
+/* =========================================
+   📱 MEDIA QUERY – for screens below 750px
+   ========================================= */
+@media (max-width: 750px) {
+
+    /* Sidebar becomes full width */
+    .sidebar {
+        width: 100%;
+        height: 120px;
+        float: none;
+    }
+
+    /* Content also becomes full width */
+    .content {
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+
+    /* Rows become auto-height instead of fixed 33% */
+    .row {
+        height: auto;
+    }
+
+    /* All boxes stack vertically */
+    .top .box,
+    .middle-left,
+    .middle-left .small,
+    .big,
+    .bottom .wide,
+    .bottom .medium {
+        width: 100%;
+        float: none;
+        height: 120px;
+        margin-bottom: 10px;
+    }
+
+    /* Middle-left small boxes become equal stacked items */
+    .middle-left .small {
+        height: 80px;
+    }
+
+    /* Remove last margin */
+    .bottom .medium {
+        margin-bottom: 0;
+    }
+}
