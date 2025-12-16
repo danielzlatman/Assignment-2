@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Layout</title>
+    <link rel="stylesheet" href="flex.css">
+</head>
+<body>
+
+<!-- Hey1 -->
+<div class="col-1 box" style="height:100%;">Hey1</div>
+
+<!-- צד ימין -->
+<div class="col-11 main">
+
+    <!-- שורה עליונה -->
+    <div class="col-12 top-row">
+        <div class="col-3 box full-height">Hey2</div>
+        <div class="col-3 box full-height">Hey3</div>
+        <div class="col-3 box full-height">Hey4</div>
+        <div class="col-3 box full-height">Hey5</div>
+    </div>
+
+    <!-- שורה אמצעית -->
+    <div class="col-12 middle-row">
+
+        <!-- שמאל: Hey6 + Hey8 -->
+        <div class="col-6 left-stack">
+            <div class="col-12 half box">Hey6</div>
+            <div class="col-12 half box">Hey8</div>
+        </div>
+
+        <!-- ימין: Hey7 -->
+        <div class="col-6 box full-height">Hey7</div>
+
+    </div>
+
+    <!-- שורה תחתונה -->
+    <div class="col-12 bottom-row">
+        <div class="col-8 box full-height">Hey9</div>
+        <div class="col-4 box full-height">Hey10</div>
+    </div>
+
+</div>
+
+</body>
+</html>
